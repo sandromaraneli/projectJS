@@ -18,6 +18,14 @@ search.addEventListener('click', function() {
 function renderer(apiList) {
 
     apiList.forEach(obj => {
+
+        // console.log(obj.title);
+        // console.log(inputs[2].value);
+        if (obj.title.toLowerCase().includes(inputs[2].value.toLowerCase())) {
+
+            // console.log(obj.title);
+            // console.log(inputs[2].value);
+
         section.innerHTML += `
         <div class="card" style="width: 18rem;">
         <img src="${obj.images[0]}" class="card-img-top" alt="...">
@@ -27,7 +35,8 @@ function renderer(apiList) {
         <a href="#" class="btn btn-primary">Buy now</a>
         </div>
     </div>
-    `;
+    `
+        };
     })
 
     
